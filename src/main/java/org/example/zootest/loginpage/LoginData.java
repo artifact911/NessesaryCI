@@ -7,7 +7,8 @@ public enum LoginData {
 
     ADMIN("admin", "111"),
     ASSISTANT("assistant", "111"),
-    CUSTOMER("иван", "111");
+    CUSTOMER("иван", "111"),
+    INVALID("взломщик", "***");
 
     String login;
     String password;

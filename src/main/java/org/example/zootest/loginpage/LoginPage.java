@@ -20,6 +20,7 @@ public class LoginPage implements LoginPageLocators, SiteBaseUrl {
     private final SelenideElement password = $(PASSWORD);
     private final SelenideElement signIn = $(SIGN_IN_BTN);
     private final SelenideElement checkbox = $(REMEMBER_ME);
+    private final SelenideElement invalidMsg = $(INVALID_LOGIN);
     private final CustomerNavBar navBar = new CustomerNavBar();
 
     @Step("Проверка логирования для всех ролей")
@@ -30,6 +31,7 @@ public class LoginPage implements LoginPageLocators, SiteBaseUrl {
         navBar.getExitLink().click();
         customerLogIn();
         navBar.getExitLink().click();
+        negativeLogIn();
     }
 
     @Step("Проверка позитивного логирования админа")
@@ -48,6 +50,12 @@ public class LoginPage implements LoginPageLocators, SiteBaseUrl {
     public void customerLogIn() {
         fillFields(LoginData.CUSTOMER.getLogin(), LoginData.CUSTOMER.getPassword());
         Assert.assertEquals(USER_GOODS, WebDriverRunner.driver().getWebDriver().getCurrentUrl());
+    }
+
+    @Step("Проверка негативного логирования")
+    public void negativeLogIn() {
+        fillFields(LoginData.INVALID.getLogin(), LoginData.INVALID.getPassword());
+        Assert.assertTrue(invalidMsg.isDisplayed());
     }
 
     private void fillFields(String logins, String passwords) {

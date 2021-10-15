@@ -10,4 +10,5 @@ public interface LoginPageLocators {
     By PASSWORD = By.xpath(BASE + "//input[@name='password']");
     By SIGN_IN_BTN = By.xpath(BASE + "//button[@type='submit']");
     By REMEMBER_ME = By.xpath(BASE + "//input[@type='checkbox']");
+    By INVALID_LOGIN = By.xpath(BASE + "//div[@id='alert']");
 }
