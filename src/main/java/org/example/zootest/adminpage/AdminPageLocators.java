@@ -1,8 +1,8 @@
-package org.example.zootest.userpage;
+package org.example.zootest.adminpage;
 
 import org.openqa.selenium.By;
 
-public interface UserPageLocators {
+public interface AdminPageLocators {
 
     String SEARCH = "//input[@id='search']";
 

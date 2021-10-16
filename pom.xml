@@ -90,7 +90,7 @@
 
 <!--                    <addForStartTestInJenkins>-->
                         <suiteXmlFiles>
-                            <suiteXmlFile>testng.xml</suiteXmlFile>
+                            <suiteXmlFile>runall.xml</suiteXmlFile>
                         </suiteXmlFiles>
 <!--                    </addForStartTestInJenkins>-->
 

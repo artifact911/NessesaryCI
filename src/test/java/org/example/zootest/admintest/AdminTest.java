@@ -4,7 +4,7 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.TmsLink;
 import org.example.zootest.BaseTest;
 import org.example.zootest.loginpage.LoginPage;
-import org.example.zootest.userpage.UserPage;
+import org.example.zootest.adminpage.AdminPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -22,7 +22,7 @@ public class AdminTest extends BaseTest {
     public void testCheckAdminRole() {
         LoginPage loginPage = new LoginPage();
         loginPage.adminLogIn();
-        UserPage page = new UserPage();
+        AdminPage page = new AdminPage();
         page.checkAdminLogIn();
     }
 }

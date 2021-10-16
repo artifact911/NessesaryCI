@@ -1,11 +1,10 @@
-package org.example.zootest.userpage;
+package org.example.zootest.adminpage;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Step;
 import lombok.Getter;
-import org.example.zootest.loginpage.LoginData;
+import org.example.zootest.SiteBaseUrl;
 import org.example.zootest.navbar.AdminNavBar;
 import org.testng.Assert;
 
@@ -14,7 +13,7 @@ import java.time.Duration;
 import static com.codeborne.selenide.Selenide.$;
 
 @Getter
-public class UserPage implements UserPageLocators {
+public class AdminPage implements AdminPageLocators, SiteBaseUrl {
 
     private final SelenideElement addUserBtn = $(ADD_USER_BTN);
     private final SelenideElement searchField = $(SEARCH_FIELD);
