@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="F:/_Developer/_Projects/dev/NasaNecessary">
-        <classes>
-            <class name="org.example.AppTest">
-                <methods>
-                    <include name="shouldAnswerWithTrue"/>
-                </methods>
-            </class>
-            <class name="org.example.zootest.loginpage.LoginPageTest">
-                <methods>
-                    <include name="testCheckAllLogin"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+
+<suite name="Full Run">
+    <suite-files>
+        <suite-file path="suites/checkLogIn.xml"/>
+        <suite-file path="suites/checkAdmin.xml"/>
+    </suite-files>
 </suite>
