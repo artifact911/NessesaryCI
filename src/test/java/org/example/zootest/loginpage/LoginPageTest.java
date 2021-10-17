@@ -15,7 +15,7 @@ public class LoginPageTest extends BaseTest {
         super.beforeClass();
     }
 
-    @TmsLink("11")
+    @TmsLink("Login")
     @Test(description = "Check Login", priority = 11)
     public void testCheckAllLogin() {
         LoginPage page = new LoginPage();

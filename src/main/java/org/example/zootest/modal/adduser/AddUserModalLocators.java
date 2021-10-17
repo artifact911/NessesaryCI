@@ -11,7 +11,7 @@ public interface AddUserModalLocators {
     By H5_MODAL = By.xpath(ADD_USER_MODAL + H5);
     By CROSS_CLOSE = By.xpath(ADD_USER_MODAL + H5 + "/../button[@class='btn-close']");
     By LAST_NAME = By.xpath(ADD_USER_MODAL + H5 + "/../..//input[@name='lastName']");
-    By FIRST_NAME = By.xpath(ADD_USER_MODAL + H5 + "/../../input[@name='firstName']");
+    By FIRST_NAME = By.xpath(ADD_USER_MODAL + H5 + "/../..//input[@name='firstName']");
     By MIDDLE_NAME = By.xpath(ADD_USER_MODAL + H5 + "/../..//input[@name='middleName']");
     By LOGIN = By.xpath(ADD_USER_MODAL + H5 + "/../..//input[@name='login']");
     By PASSWORD = By.xpath(ADD_USER_MODAL + H5 + "/../..//input[@name='password']");

@@ -10,4 +10,5 @@ public interface UserLocators {
     By SEARCH_FIELD = By.xpath(SEARCH);
     By SEARCH_BUTTON = By.xpath(SEARCH + "/following-sibling::*");
     By USER_TABLE = By.xpath("//div[@class='user_list']");
+    By USER_TABLE_ELEMENTS = By.xpath("//div[@class='user_list']//tbody/tr");
 }

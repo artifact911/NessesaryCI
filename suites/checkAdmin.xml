@@ -3,14 +3,12 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="F:/_Developer/_Projects/dev/NasaNecessary">
         <classes>
-            <class name="org.example.AppTest">
-                <methods>
-                    <include name="shouldAnswerWithTrue"/>
-                </methods>
-            </class>
             <class name="org.example.zootest.admintest.AdminTest">
                 <methods>
                     <include name="testCheckAdminRole"/>
+                    <include name="testAddUser"/>
+                    <include name="testEditUser"/>
+                    <include name="testDeleteUser"/>
                 </methods>
             </class>
         </classes>

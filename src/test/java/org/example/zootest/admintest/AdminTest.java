@@ -18,11 +18,32 @@ public class AdminTest extends BaseTest {
     }
 
     @TmsLink("admin")
-    @Test(description = "Check admin role", priority = 10)
+    @Test(alwaysRun = true, description = "Check admin role", priority = 10)
     public void testCheckAdminRole() {
         LoginPage loginPage = new LoginPage();
         loginPage.adminLogIn();
         AdminPage page = new AdminPage();
         page.checkAdminLogIn();
+    }
+
+    @TmsLink("admin")
+    @Test(dependsOnMethods = {"testCheckAdminRole"}, description = "Add user", priority = 20)
+    public void testAddUser() {
+        AdminPage page = new AdminPage();
+        page.checkAddUser();
+    }
+
+    @TmsLink("admin")
+    @Test(dependsOnMethods = {"testAddUser"}, description = "Edit user", priority = 30)
+    public void testEditUser() {
+        AdminPage page = new AdminPage();
+        page.checkEditUser();
+    }
+
+    @TmsLink("admin")
+    @Test(dependsOnMethods = {"testEditUser"}, description = "Delete user", priority = 40)
+    public void testDeleteUser() {
+        AdminPage page = new AdminPage();
+        page.checkDelUser();
     }
 }
